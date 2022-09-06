@@ -115,7 +115,10 @@ const TextInput = ({
       }
     }
 
-    // onChange ? onChange(value) : 0;
+    if (onChange) {
+      onChange(value);
+    } else {
+    }
     setValue(value);
     if (localStorageKey) {
       localStorage.setItem(localStorageKey, value);

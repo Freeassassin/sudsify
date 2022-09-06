@@ -3,15 +3,16 @@ import React, { useState } from "react";
 import { Button } from "../../components/Button/Button";
 import { TextInput } from "../../components/TextInput/TextInput";
 import sudsman from "../../assets/sudsman.jpg";
+import { suggestSong } from "./functions";
 
 const PageSubmit = () => {
-  const [songData, setSongData] = useState({});
+  let songData = {};
   const [clear, setClear] = useState(false);
 
   return (
     <div className="suggest-page">
       <div className="song-suggest">
-        <img src={sudsman} className="sudsman-logo"></img>
+        <img src={sudsman} className="sudsman-logo" alt="sudsman logo"></img>
         <h3>Suggest A Song</h3>
         <div className="full-width-input">
           <TextInput
@@ -40,8 +41,9 @@ const PageSubmit = () => {
           <Button
             label="Suggest Song"
             style={{ margin: 0 }}
-            onClick={async () => {
-              //
+            onClick={() => {
+              suggestSong(songData);
+              setClear(true);
             }}
           />
         </div>
