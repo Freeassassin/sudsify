@@ -45,7 +45,7 @@ const TextInput = ({
     } else if (initialValue !== undefined) {
       onChange(initialValue);
     }
-  }, []);
+  });
 
   const [value, setValue] = useState(
     localStorageKey
@@ -59,14 +59,14 @@ const TextInput = ({
       : ""
   );
 
-  useEffect(() => {
+  useEffect((setClearText) => {
     if (clearText) {
       setValue("");
       setClearText(false);
     }
   }, [clearText]);
 
-  useEffect(() => {
+  useEffect((oldValue) => {
     setValue(oldValue);
   }, [cancelEdit]);
 
