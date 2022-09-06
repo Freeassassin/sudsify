@@ -42,7 +42,7 @@ const PageApprove = () => {
 
   const [suggestions, setSuggestions] = useState([]);
 
-  useEffect(() => {
+  useEffect((database) => {
     const suggestionsRef = ref(database, "/suggestions");
     onValue(suggestionsRef, (snapshot) => {
       setSuggestions(Object.values(snapshot.val()));
