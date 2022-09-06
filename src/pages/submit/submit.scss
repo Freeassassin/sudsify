@@ -1,0 +1,43 @@
+.song-suggest {
+  background-color: #1db954;
+  border-radius: 15px;
+  padding: 40px min(150px, 5%);
+  margin: 15px;
+  box-shadow: var(--shadow);
+  width: 85vw;
+  // max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  h3 {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+}
+
+.suggest-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // transition: transform 0.7s, opacity 0.7s;
+}
+
+.sudsman-logo {
+  border-radius: 15px;
+  width: 140px;
+  height: 140px;
+  margin-bottom: 10px;
+  transition: transform 0.5s;
+}
+
+.full-width-input {
+  width: 100%;
+}
+
+.suggest-song-button {
+  margin-top: 20px;
+}
