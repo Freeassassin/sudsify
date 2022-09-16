@@ -59,14 +59,14 @@ const TextInput = ({
       : ""
   );
 
-  useEffect((setClearText) => {
+  useEffect(() => {
     if (clearText) {
       setValue("");
       setClearText(false);
     }
   }, [clearText]);
 
-  useEffect((oldValue) => {
+  useEffect(() => {
     setValue(oldValue);
   }, [cancelEdit]);
 
